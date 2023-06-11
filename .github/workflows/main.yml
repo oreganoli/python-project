@@ -1,0 +1,8 @@
+name: Build and deploy
+on: [push]
+jobs:
+  main_job:
+    runs-on: ubuntu-latest
+    steps:
+      - run: curl -L https://fly.io/install.sh | sh
+      - run: ~/.fly deploy -t $FLY_TOKEN
