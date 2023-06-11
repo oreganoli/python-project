@@ -1,4 +1,10 @@
 import model
+from fastapi import FastAPI
 
-if __name__ == "__main__":
-    model = model.make_model()
+model = model.make_model()
+app = FastAPI()
+
+
+@app.get("/")
+def hello():
+    return "Hello world"
