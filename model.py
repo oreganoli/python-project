@@ -40,3 +40,4 @@ def make_model():
     # Train model
     model = LinearRegression()
     model.fit(X, y)
+    return model
