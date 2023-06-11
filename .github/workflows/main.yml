@@ -5,4 +5,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: curl -L https://fly.io/install.sh | sh
-      - run: ~/.fly deploy -t $FLY_TOKEN
+      - run: ~/.fly/bin/flyctl deploy -t $FLY_TOKEN
