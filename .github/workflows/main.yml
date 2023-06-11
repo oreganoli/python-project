@@ -8,7 +8,8 @@ jobs:
   main_job:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - run: curl -L https://fly.io/install.sh | sh
-      - run: ~/.fly/bin/flyctl -t "$FLY_TOKEN" -a python-project deploy
+      - run: ~/.fly/bin/flyctl -t "$FLY_TOKEN" deploy
         env:
           FLY_TOKEN: ${{ secrets.FLY_TOKEN }}
