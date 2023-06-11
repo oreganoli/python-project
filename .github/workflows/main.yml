@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: curl -L https://fly.io/install.sh | sh
-      - run: ~/.fly/bin/flyctl -t $FLY_TOKEN deploy
+      - run: ~/.fly/bin/flyctl -t "$FLY_TOKEN" deploy
         env:
           FLY_TOKEN: ${{ secrets.FLY_TOKEN }}
